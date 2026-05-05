@@ -12,6 +12,15 @@ export default function VideoLibrary({ onNavigate }) {
   const [search, setSearch] = useState('');
   const [activeGroup, setActiveGroup] = useState(null);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [watched, setWatched] = useState(() => JSON.parse(localStorage.getItem('abmdi_watched_videos') || '{}'));
+
+  function markWatched(url) {
+    const id = getYouTubeId(url);
+    if (!id) return;
+    const next = { ...watched, [id]: true };
+    setWatched(next);
+    localStorage.setItem('abmdi_watched_videos', JSON.stringify(next));
+  }
 
   const filtered = VIDEO_LIBRARY.map(group => ({
     ...group,
@@ -52,10 +61,14 @@ export default function VideoLibrary({ onNavigate }) {
 
   return (
     <div className="px-4 py-6 lg:px-8 lg:py-8 max-w-5xl mx-auto">
+      <button onClick={() => onNavigate('home')} className="lg:hidden flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 mb-4 transition-colors">
+        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+        Dashboard
+      </button>
       <div className="flex items-center justify-between mb-5">
         <div>
           <h1 className="text-xl lg:text-2xl font-bold">Video Library</h1>
-          <p className="text-sm text-slate-400 mt-0.5">{totalVideos} videos across {VIDEO_LIBRARY.length} topics</p>
+          <p className="text-sm text-slate-400 mt-0.5">{totalVideos} videos · <span className="text-emerald-400">{Object.keys(watched).length} watched</span></p>
         </div>
       </div>
 
@@ -98,22 +111,22 @@ export default function VideoLibrary({ onNavigate }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {group.videos.map(video => {
                   const vid = getYouTubeId(video.url);
+                  const isWatched = vid && watched[vid];
                   return (
-                    <button key={video.url} onClick={() => setActiveVideo(video)}
-                      className="flex items-center gap-3 bg-slate-800 hover:bg-slate-750 border border-slate-700 hover:border-amber-500/40 rounded-2xl p-3 text-left transition-colors active:scale-[0.98] group">
+                    <button key={video.url} onClick={() => { setActiveVideo(video); markWatched(video.url); }}
+                      className={`flex items-center gap-3 border rounded-2xl p-3 text-left transition-colors active:scale-[0.98] group ${isWatched ? 'bg-emerald-500/5 border-emerald-500/30 hover:border-emerald-500/50' : 'bg-slate-800 border-slate-700 hover:border-amber-500/40'}`}>
                       <div className="relative shrink-0 w-20 h-12 rounded-lg overflow-hidden bg-slate-700">
                         {vid && <img src={`https://img.youtube.com/vi/${vid}/mqdefault.jpg`} alt="" className="w-full h-full object-cover" />}
                         <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                          <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z" />
-                            </svg>
-                          </div>
+                          {isWatched
+                            ? <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center"><span className="text-white text-xs font-bold">✓</span></div>
+                            : <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center"><svg className="w-3 h-3 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></div>
+                          }
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium line-clamp-2 text-slate-200 group-hover:text-amber-300 transition-colors">{video.title}</p>
-                        <p className="text-xs text-amber-400 mt-0.5">▶ Watch now</p>
+                        <p className={`text-sm font-medium line-clamp-2 transition-colors ${isWatched ? 'text-slate-400' : 'text-slate-200 group-hover:text-amber-300'}`}>{video.title}</p>
+                        <p className={`text-xs mt-0.5 ${isWatched ? 'text-emerald-400' : 'text-amber-400'}`}>{isWatched ? '✓ Watched' : '▶ Watch now'}</p>
                       </div>
                     </button>
                   );

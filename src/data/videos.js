@@ -1,79 +1,110 @@
 export const VIDEO_LIBRARY = [
   {
-    group: "CIA Exam Overview",
+    group: 'ABMDI Exam Overview',
     videos: [
-      { title: "CIA Part 3: Q&A, Tips & Practice Questions", url: "https://www.youtube.com/watch?v=Ur8gknxYMeo" },
-      { title: "CIA Exam Syllabus Overview 2025", url: "https://www.youtube.com/watch?v=DhvAJJH7MNo" },
-      { title: "Becker – The IIA CIA Exam Review", url: "https://www.youtube.com/watch?v=pNhO3Do_kMU" },
+      { title: 'ABMDI Practice Test 2026 — Exam Questions & Answers', url: 'https://www.youtube.com/watch?v=PfJSVcnpOvg' },
+      { title: 'The Dead Tell Stories: Medicolegal Death Investigations', url: 'https://www.youtube.com/watch?v=jJVqQrrAHlg' },
+      { title: 'Legal Medical Death Investigator — Career Overview', url: 'https://www.youtube.com/watch?v=3uNDc25FDkY' },
     ],
   },
   {
-    group: "Capital Budgeting & NPV",
+    group: 'Time of Death Estimation',
     videos: [
-      { title: "NPV and IRR Explained", url: "https://www.youtube.com/watch?v=_sP0oAeO2oM" },
-      { title: "Capital Budgeting: NPV vs IRR vs MIRR", url: "https://www.youtube.com/watch?v=NdRx5dApU-o" },
-      { title: "Capital Budgeting Techniques", url: "https://www.youtube.com/watch?v=CO8LDV2sO6M" },
+      { title: 'Rigor Mortis, Livor Mortis, Pallor Mortis, Algor Mortis Explained', url: 'https://www.youtube.com/watch?v=intBEYKlaGY' },
+      { title: 'Using Rigor Mortis to Estimate Time of Death', url: 'https://www.youtube.com/watch?v=lKLmKSoLGAQ' },
+      { title: 'Calculating Time of Death with Algor Mortis', url: 'https://www.youtube.com/watch?v=bb1bhzoEvmU' },
+      { title: 'Postmortem Changes — Forensic Pathology Overview', url: 'https://www.youtube.com/watch?v=KyzWlj_pGJQ' },
     ],
   },
   {
-    group: "Data Analytics in Auditing",
+    group: 'Death Scene Investigation',
     videos: [
-      { title: "Descriptive, Diagnostic & Predictive Analytics", url: "https://www.youtube.com/watch?v=rWsOtsKTJi0" },
-      { title: "Free CIA Part 3 Practice — Activity Ratios", url: "https://www.youtube.com/watch?v=Ol0U1-6VZYw" },
+      { title: 'Documenting the Crime Scene Part 1: Notes and Sketches', url: 'https://www.youtube.com/watch?v=QiSPfAA1aVU' },
+      { title: 'Documenting the Crime Scene Part 2: Photography and Videography', url: 'https://www.youtube.com/watch?v=mLCrofqANy0' },
+      { title: 'Collection and Preservation of Crime Scene Evidence', url: 'https://www.youtube.com/watch?v=lmxQ4Rzrju0' },
+      { title: 'Crime Scene Investigation Basics — Step by Step', url: 'https://www.youtube.com/watch?v=QeF78uaIVj0' },
     ],
   },
   {
-    group: "IT Security & Cybersecurity",
+    group: 'Manner & Cause of Death',
     videos: [
-      { title: "Zero Trust Architecture Explained: 7 Pillars", url: "https://www.youtube.com/watch?v=ELSbzCDdUQI" },
-      { title: "What Is Zero Trust Architecture? (NIST 800-207)", url: "https://www.youtube.com/watch?v=5Kq64vOgE10" },
-      { title: "BYOD & Cybersecurity Risks", url: "https://www.youtube.com/watch?v=U9Ckc3MecvA" },
+      { title: 'Defining Cause, Manner, and Mechanism of Death', url: 'https://www.youtube.com/watch?v=KyzWlj_pGJQ' },
+      { title: 'Death: Manner, Mechanism, and Cause — Forensic Science', url: 'https://www.youtube.com/watch?v=rLZSVTF5jgI' },
+      { title: 'Death Manner, Mechanism, Cause, and Time', url: 'https://www.youtube.com/watch?v=QeF78uaIVj0' },
     ],
   },
   {
-    group: "Six Sigma & Process Improvement",
+    group: 'Forensic Pathology Basics',
     videos: [
-      { title: "Introduction to DMAIC", url: "https://www.youtube.com/watch?v=nG3BoGRZjOc" },
-      { title: "DMAIC Process Explained with Example", url: "https://www.youtube.com/watch?v=TzPPuvciE-Y" },
-      { title: "Six Sigma DMAIC Complete Guide", url: "https://www.youtube.com/watch?v=539Ns05UKuo" },
+      { title: 'Forensic Pathology: Language of Trauma (Blunt and Sharp Force)', url: 'https://www.youtube.com/watch?v=euxfQngeF64' },
+      { title: 'What Happens In An Autopsy? Interview with Dr Nicole Jackson', url: 'https://www.youtube.com/watch?v=zW26Ya0AdVA' },
+      { title: 'Firearm Injuries: Ballistics, Entry vs. Exit Wounds', url: 'https://www.youtube.com/watch?v=vGfy0IMo0Z4' },
+      { title: 'Trauma Analysis in Forensic Anthropology', url: 'https://www.youtube.com/watch?v=8s6P4hFhhu8' },
+      { title: 'How Forensic Anthropologists Distinguish Bone Trauma', url: 'https://www.youtube.com/watch?v=-R19Mz1S3s4' },
     ],
   },
   {
-    group: "Organizational Behavior & Leadership",
+    group: 'Decomposition & Taphonomy',
     videos: [
-      { title: "Maslow, Herzberg & McGregor Motivation Theories", url: "https://www.youtube.com/watch?v=YV_LBx3t6pA" },
-      { title: "Herzberg's Two-Factor Theory", url: "https://www.youtube.com/watch?v=Le5Wfk4zWd8" },
-      { title: "Motivation Theories with Examples", url: "https://www.youtube.com/watch?v=pjgdvp2f_cs" },
+      { title: 'Forensic Taphonomy: 5 Stages of Human Decomposition', url: 'https://www.youtube.com/watch?v=tmOB3VYRMaY' },
+      { title: 'How Does a Human Body Decompose? | Body Farm Forensics', url: 'https://www.youtube.com/watch?v=cD-bXzM5ULE' },
+      { title: 'How Does Taphonomy Help Forensic Anthropologists?', url: 'https://www.youtube.com/watch?v=tz132MA2XD0' },
     ],
   },
   {
-    group: "Business Strategy",
+    group: 'Identification Techniques',
     videos: [
-      { title: "Porter's Five Forces Explained", url: "https://www.youtube.com/watch?v=Dfp23xSqpdk" },
-      { title: "Porter's 5 Forces with Tesla Example", url: "https://www.youtube.com/watch?v=5F0dI8zaotU" },
-      { title: "BCG Matrix & Porter's Frameworks", url: "https://www.youtube.com/watch?v=T8Xh_AOxIIA" },
+      { title: 'DNA Fingerprinting — How It Works: STR Analysis Explained', url: 'https://www.youtube.com/watch?v=OMfpRC_QGfY' },
+      { title: 'Forensic Odontologist: Dental Records Key to Identifying Remains', url: 'https://www.youtube.com/watch?v=PNuzDI_uz2k' },
+      { title: 'Forensic Odontology — Identification by NIOM', url: 'https://www.youtube.com/watch?v=bYWLOBKe4xI' },
     ],
   },
   {
-    group: "Risk Management & ERM",
+    group: 'Toxicology',
     videos: [
-      { title: "Enterprise Risk Management Explained Simply", url: "https://www.youtube.com/watch?v=PdTBH8Sotb8" },
-      { title: "COSO ERM Framework Explained", url: "https://www.youtube.com/watch?v=_Ft0V4qr81E" },
-      { title: "COSO ERM Framework — CMA Focus", url: "https://www.youtube.com/watch?v=b4GtE7LWDZo" },
+      { title: 'Forensic Toxicology — Drug and Poison Analysis in Death Investigation', url: 'https://www.youtube.com/watch?v=D1sb2IajNkk' },
+      { title: 'Blood Alcohol Content: How BAC Is Calculated', url: 'https://www.youtube.com/watch?v=Y34GPVqSAnU' },
+      { title: 'Postmortem Toxicology: Interpreting Drug Levels After Death', url: 'https://www.youtube.com/watch?v=rLZSVTF5jgI' },
     ],
   },
   {
-    group: "Financial Reporting",
+    group: 'Special Death Investigations',
     videos: [
-      { title: "IFRS vs GAAP — CPA Exam Questions", url: "https://www.youtube.com/watch?v=lMk68w6sAck" },
+      { title: 'Fire Investigation — EXPLAINED (with real examples)', url: 'https://www.youtube.com/watch?v=-46WCvZCrYs' },
+      { title: 'Fire Investigation Fundamentals', url: 'https://www.youtube.com/watch?v=SmmAh87Anh8' },
+      { title: 'Investigation of Sudden Infant Death Syndrome (SIDS)', url: 'https://www.youtube.com/watch?v=moQ--jPcN24' },
     ],
   },
   {
-    group: "Study Techniques",
+    group: 'Mass Fatality Incidents',
     videos: [
-      { title: "Spaced Repetition: The Top 1% Study Method", url: "https://www.youtube.com/watch?v=WFVjzhtbOTA" },
-      { title: "How to Use Spaced Repetition in 3 Minutes", url: "https://www.youtube.com/watch?v=X_TWGOxz8X4" },
-      { title: "Spaced Repetition in Learning Theory", url: "https://www.youtube.com/watch?v=cVf38y07cfk" },
+      { title: "Inside Florida's Mass Fatality Response: Planning & Training", url: 'https://www.youtube.com/watch?v=zdK6FwF6nPY' },
+      { title: 'Lessons from the Field: DMORT Disaster Response Experiences', url: 'https://www.youtube.com/watch?v=Bmif7NwSOdU' },
+    ],
+  },
+  {
+    group: 'Legal & Ethical Framework',
+    videos: [
+      { title: 'HIPAA and Deceased Individuals — What Applies?', url: 'https://www.youtube.com/watch?v=Y34GPVqSAnU' },
+      { title: 'Ethics & Report Writing in Medicolegal Death Investigations', url: 'https://www.youtube.com/watch?v=D1sb2IajNkk' },
+      { title: 'Forensic Report Writing Standards', url: 'https://www.youtube.com/watch?v=NkGNFv8M_fM' },
+      { title: 'Forensics Report Writing Best Practices', url: 'https://www.youtube.com/watch?v=a4dwypa12c4' },
+    ],
+  },
+  {
+    group: 'Interview & Communication',
+    videos: [
+      { title: 'Investigative Interviewing: The Science and Techniques', url: 'https://www.youtube.com/watch?v=X_ZuSj561XA' },
+      { title: 'The Essentials of Investigative Interviewing — Dean Benard', url: 'https://www.youtube.com/watch?v=vYfFgEPXmhA' },
+      { title: 'Death Notification — Best Practices for First Responders', url: 'https://www.youtube.com/watch?v=CU4qiTsAzlc' },
+    ],
+  },
+  {
+    group: 'Study Techniques',
+    videos: [
+      { title: 'Spaced Repetition: The Top 1% Study Method', url: 'https://www.youtube.com/watch?v=WFVjzhtbOTA' },
+      { title: 'How to Use Spaced Repetition in 3 Minutes', url: 'https://www.youtube.com/watch?v=X_TWGOxz8X4' },
+      { title: 'Active Recall for Exam Mastery', url: 'https://www.youtube.com/watch?v=ukLnPbIffxE' },
     ],
   },
 ];

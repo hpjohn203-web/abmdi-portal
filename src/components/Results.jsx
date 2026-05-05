@@ -62,6 +62,10 @@ export default function Results({ onNavigate }) {
 
   return (
     <div className="px-4 py-6 lg:px-8 lg:py-8 max-w-5xl mx-auto">
+      <button onClick={() => onNavigate('home')} className="lg:hidden flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-300 mb-4 transition-colors">
+        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+        Dashboard
+      </button>
       {/* Header row */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl lg:text-2xl font-bold">My Progress</h1>
@@ -112,7 +116,7 @@ export default function Results({ onNavigate }) {
             <Section title="📚 Not Yet Started">
               <div className="space-y-1">
                 {notStarted.map(t => (
-                  <div key={t} className="text-sm text-slate-400 bg-slate-800 rounded-xl px-3 py-2">{t}</div>
+                  <div key={t} className="text-sm text-slate-400 bg-slate-900/60 rounded-xl px-3 py-2">{t}</div>
                 ))}
               </div>
             </Section>
@@ -121,17 +125,17 @@ export default function Results({ onNavigate }) {
 
         {/* Right column — Session history */}
         {recentSessions.length > 0 && (
-          <div>
+          <div className="lg:sticky lg:top-4 lg:self-start">
             <Section title="📋 Session History">
-              <div className="space-y-2">
-                {recentSessions.map((s, i) => {
+              <div className="space-y-2 lg:max-h-[520px] lg:overflow-y-auto lg:pr-1 scrollbar-hide">
+                {progress.sessionHistory.map((s, i) => {
                   const pct = Math.round((s.score / s.total) * 100);
                   const detail = (progress.sessionDetails || [])[i];
                   return (
                     <button
                       key={i}
                       onClick={() => detail?.questions?.length ? setDetailSession(detail) : null}
-                      className={`w-full flex items-center justify-between bg-slate-800 rounded-xl px-3 py-2.5 text-left ${detail?.questions?.length ? 'hover:bg-slate-700 transition-colors cursor-pointer' : ''}`}
+                      className={`w-full flex items-center justify-between bg-slate-900/60 rounded-xl px-3 py-2.5 text-left ${detail?.questions?.length ? 'hover:bg-slate-700/60 transition-colors cursor-pointer' : ''}`}
                     >
                       <div>
                         <p className="text-sm font-medium">{s.topic}</p>
@@ -227,7 +231,7 @@ function MiniStat({ label, value }) {
 
 function Section({ title, children }) {
   return (
-    <div>
+    <div className="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-4 lg:p-5">
       <h2 className="text-sm font-semibold text-slate-300 mb-3">{title}</h2>
       <div className="space-y-2">{children}</div>
     </div>
@@ -238,9 +242,9 @@ function TopicBar({ topic, pct, attempted, total }) {
   const color     = pct >= 80 ? 'bg-emerald-400' : pct >= 60 ? 'bg-amber-400' : 'bg-red-400';
   const textColor = pct >= 80 ? 'text-emerald-400' : pct >= 60 ? 'text-amber-400' : 'text-red-400';
   return (
-    <div className="bg-slate-800 rounded-xl px-3 py-3">
+    <div className="bg-slate-900/60 rounded-xl px-3 py-3">
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-sm truncate max-w-[180px]">{topic}</span>
+        <span className="text-sm flex-1 min-w-0 truncate pr-3">{topic}</span>
         <div className="flex items-center gap-2">
           <span className="text-xs text-slate-400">{attempted}/{total}</span>
           <span className={`text-sm font-bold ${textColor}`}>{pct}%</span>

@@ -5,7 +5,8 @@ import { useProgress } from '../hooks/useProgress';
 
 const HOW_TO_ITEMS = [
   { icon: '🃏', title: 'Flashcards', desc: 'Spaced repetition cards for all ABMDI domains. Cards you struggle with come back sooner.' },
-  { icon: '⏱️', title: 'Quiz Mode', desc: 'Timed MCQ practice. Choose topic, question count, and timer. Wrong answers go to your Error Log.' },
+  { icon: '⏱️', title: 'Quiz Mode', desc: 'Timed MCQ practice. Choose topic, question count, and timer. Answers revealed at end with full breakdown.' },
+  { icon: '📝', title: 'Full Exam', desc: '120-question, 120-minute simulation of the real ABMDI Registry exam. Navigate freely, flag questions, submit when ready.' },
   { icon: '🎯', title: 'Drill Weak Topics', desc: 'Appears on the dashboard once enough data exists. One tap auto-starts a quiz on your 3 lowest-accuracy topics.' },
   { icon: '📊', title: 'My Progress', desc: 'Full accuracy breakdown by topic, session history, and CSV export for offline review.' },
   { icon: '📖', title: 'Glossary', desc: 'Searchable key definitions across all ABMDI exam domains.' },
@@ -240,9 +241,10 @@ export default function Home({ onNavigate }) {
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
               <ActionBtn icon="🃏" label="Flashcards"    sub="Flip to reveal"   color="amber"   onClick={() => onNavigate('study')} />
               <ActionBtn icon="⏱️" label="Quiz Mode"     sub="Timed MCQ"        color="sky"     onClick={() => onNavigate('quiz')} />
+              <ActionBtn icon="📝" label="Full Exam"     sub="120q · 120 min"   color="rose"    onClick={() => onNavigate('exam')} />
               <ActionBtn icon="📊" label="My Progress"   sub="Stats & analysis" color="emerald" onClick={() => onNavigate('results')} />
               <ActionBtn icon="📹" label="Video Library" sub="Topic videos"     color="violet"  onClick={() => onNavigate('videos')} />
-              <ActionBtn icon="📅" label="Study Planner" sub="Plan your week"   color="rose"    onClick={() => onNavigate('planner')} />
+              <ActionBtn icon="📅" label="Study Planner" sub="Plan your week"   color="slate"   onClick={() => onNavigate('planner')} />
               <ActionBtn
                 icon="⚠️"
                 label="Error Log"
@@ -295,6 +297,21 @@ export default function Home({ onNavigate }) {
               </div>
             </div>
           )}
+
+          {/* Rate & Review widget */}
+          <button
+            onClick={() => onNavigate('contact')}
+            className="w-full bg-amber-500/10 border border-amber-500/25 hover:border-amber-500/50 hover:bg-amber-500/15 rounded-2xl px-4 py-4 text-left transition-all active:scale-[0.98]"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">⭐</span>
+              <div className="flex-1">
+                <p className="font-semibold text-sm text-amber-300">Enjoying the portal?</p>
+                <p className="text-xs text-slate-400 mt-0.5">Share your experience — it takes less than a minute.</p>
+              </div>
+              <span className="text-slate-500 text-xs shrink-0">Rate →</span>
+            </div>
+          </button>
         </div>
 
         {/* Right column — Topics */}

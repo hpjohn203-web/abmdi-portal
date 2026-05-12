@@ -13,7 +13,7 @@ export const VIDEO_LIBRARY = [
       { title: 'Rigor Mortis, Livor Mortis, Pallor Mortis, Algor Mortis Explained', url: 'https://www.youtube.com/watch?v=intBEYKlaGY' },
       { title: 'Using Rigor Mortis to Estimate Time of Death', url: 'https://www.youtube.com/watch?v=lKLmKSoLGAQ' },
       { title: 'Calculating Time of Death with Algor Mortis', url: 'https://www.youtube.com/watch?v=bb1bhzoEvmU' },
-      { title: 'Postmortem Changes — Forensic Pathology Overview', url: 'https://www.youtube.com/watch?v=KyzWlj_pGJQ' },
+      { title: 'Postmortem Changes | Forensic Medicine', url: 'https://www.youtube.com/watch?v=PuPadtjZnjU' },
     ],
   },
   {
@@ -28,7 +28,7 @@ export const VIDEO_LIBRARY = [
   {
     group: 'Manner & Cause of Death',
     videos: [
-      { title: 'Defining Cause, Manner, and Mechanism of Death', url: 'https://www.youtube.com/watch?v=KyzWlj_pGJQ' },
+      { title: 'Death: Manner, Mechanism, and Cause — Chapter 12 Forensic Science', url: 'https://www.youtube.com/watch?v=N45LLtv5oUE' },
       { title: 'Death: Manner, Mechanism, and Cause — Forensic Science', url: 'https://www.youtube.com/watch?v=rLZSVTF5jgI' },
       { title: 'Death Manner, Mechanism, Cause, and Time', url: 'https://www.youtube.com/watch?v=QeF78uaIVj0' },
     ],
@@ -63,7 +63,7 @@ export const VIDEO_LIBRARY = [
     group: 'Toxicology',
     videos: [
       { title: 'Forensic Toxicology — Drug and Poison Analysis in Death Investigation', url: 'https://www.youtube.com/watch?v=D1sb2IajNkk' },
-      { title: 'Blood Alcohol Content: How BAC Is Calculated', url: 'https://www.youtube.com/watch?v=Y34GPVqSAnU' },
+      { title: 'Toxicology: Blood Alcohol Concentration & Associated Clinical Signs', url: 'https://www.youtube.com/watch?v=9eD9Qd8HA2o' },
       { title: 'Postmortem Toxicology: Interpreting Drug Levels After Death', url: 'https://www.youtube.com/watch?v=rLZSVTF5jgI' },
     ],
   },
@@ -85,7 +85,7 @@ export const VIDEO_LIBRARY = [
   {
     group: 'Legal & Ethical Framework',
     videos: [
-      { title: 'HIPAA and Deceased Individuals — What Applies?', url: 'https://www.youtube.com/watch?v=Y34GPVqSAnU' },
+      { title: 'HIPAA Staff Training Updated for 2024', url: 'https://www.youtube.com/watch?v=g3Vifzw_TM0' },
       { title: 'Ethics & Report Writing in Medicolegal Death Investigations', url: 'https://www.youtube.com/watch?v=D1sb2IajNkk' },
       { title: 'Forensic Report Writing Standards', url: 'https://www.youtube.com/watch?v=NkGNFv8M_fM' },
       { title: 'Forensics Report Writing Best Practices', url: 'https://www.youtube.com/watch?v=a4dwypa12c4' },
